@@ -8,6 +8,9 @@ int pyoranRenkaanPiiri = 0;
 int BeforeTime = 1;
 int AfterTime = 0;
 int TimePassed = 4;
+int DistanceInOneSeacond = 0;
+int SpeedKmH = 0;
+int SpeedMS = 0;
 
 
 
@@ -17,15 +20,28 @@ void calculateBikeSpeed() {
   pyoranRenkaanPiiri = 68.58 * PI;
   while (true)
   {
+    
     BeforeTime = millis();
     if (6 == HIGH){
       AfterTime = millis();
       TimePassed = AfterTime - BeforeTime;
-      Serial.println(TimePassed);
+      TravelledDistanceInOneSeacond = TravelledDistanceInOneSeacond + pyoranRenkaanPiiri;
+      TimeUntillOneMinute = TimeUntillOneMinute + TimePassed;
+      //Serial.println(TimePassed);
+
+      //return TravelledDistanceInOneSeacond; 
       
       
   }
-
+  
+  if (TimeUntillOneSeacond < 1000){
+    DistanceInOneSeacond = TravelledDistanceInOneSeacond;
+    TravelledDistanceInOneSeacond = 0;
+    SpeedMS = DistanceInOneSeacond * 100;
+    SpeedKmH = SpeedMS = 3.6;
+    
+  }
+  
   }
   
 
@@ -43,7 +59,7 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  bikeSpeed = digitalRead(6);
+  bikeSpeed = calculateBikeSpeed;
   throttleInput = digitalRead(3);
   throttleOutput = digitalRead(9);
   swich = digitalRead(11);
