@@ -5,14 +5,26 @@ int cruiseThrottle = 0;
 int cruiseSpeed = 0;
 int swich = 0;
 int pyöränRenkaanPiiri = 0;
+int BeforeTime = 0;
+int AfterTime = 0;
+int TimePassed = 0;
 
 #define PI 3.1415926535897932384626433832795
 
 void calculateBikeSpeed(){
   pyöränRenkaanPiiri = 68.58 * PI
-  if (6 == HIGH){
-    time = mills()
+  while (true)
+  {
+    BeforeTime = mills()
+    if (6 == HIGH){
+      AfterTime = mills()
+      TimePassed = AfterTime - Beforetime;
+      
+      
   }
+
+  }
+  
 
 }
 
