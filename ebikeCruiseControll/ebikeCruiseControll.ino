@@ -4,21 +4,24 @@ int throttleOutput = 0;
 int cruiseThrottle = 0;
 int cruiseSpeed = 0;
 int swich = 0;
-int pyöränRenkaanPiiri = 0;
-int BeforeTime = 0;
+int pyoranRenkaanPiiri = 0;
+int BeforeTime = 1;
 int AfterTime = 0;
-int TimePassed = 0;
+int TimePassed = 4;
 
-#define PI 3.1415926535897932384626433832795
 
-void calculateBikeSpeed(){
-  pyöränRenkaanPiiri = 68.58 * PI
+
+void calculateBikeSpeed() {
+  
+  #define PI 3.1415926535897932384626433832795
+  pyoranRenkaanPiiri = 68.58 * PI;
   while (true)
   {
-    BeforeTime = mills()
+    BeforeTime = millis();
     if (6 == HIGH){
-      AfterTime = mills()
-      TimePassed = AfterTime - Beforetime;
+      AfterTime = millis();
+      TimePassed = AfterTime - BeforeTime;
+      Serial.println(TimePassed);
       
       
   }
