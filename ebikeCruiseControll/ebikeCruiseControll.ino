@@ -7,7 +7,8 @@ int swich = 0;
 int pyöränRenkaanPiiri = 0;
 
 void calculateBikeSpeed(){
-  pyöränRenkaanPiiri = 68.58*
+  pyöränRenkaanPiiri = 68.58 * pi
+  
 }
 
 void setup() {
