@@ -4,7 +4,11 @@ int throttleOutput = 0;
 int cruiseThrottle = 0;
 int cruiseSpeed = 0;
 int swich = 0;
+int pyöränRenkaanPiiri = 0;
 
+void calculateBikeSpeed(){
+  pyöränRenkaanPiiri = 68.58*
+}
 
 void setup() {
   // put your setup code here, to run once:
