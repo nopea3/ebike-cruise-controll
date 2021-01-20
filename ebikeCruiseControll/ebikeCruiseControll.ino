@@ -30,9 +30,6 @@ int calculateBikeSpeed() {
       TimePassed = AfterTime - BeforeTime;
       distanceUntillSeacond = distanceUntillSeacond + pyoranRenkaanPiiri;
       TimeUntillOneSeacond = TimeUntillOneSeacond + TimePassed;
-      //Serial.println(TimePassed);
-
-      //return TravelledDistanceInOneSeacond; 
       
       
   }
@@ -40,7 +37,6 @@ int calculateBikeSpeed() {
   if (TimeUntillOneSeacond > 1000){
     DistanceInOneSeacond = distanceUntillSeacond;
     distanceUntillSeacond = 0;
-    //SpeedMS =  * 100;
     SpeedKmH = DistanceInOneSeacond * 3.6 * 100;
 
     TimeUntillOneSeacond = 0;
