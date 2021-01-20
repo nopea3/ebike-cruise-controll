@@ -6,9 +6,14 @@ int cruiseSpeed = 0;
 int swich = 0;
 int pyöränRenkaanPiiri = 0;
 
+#define PI 3.1415926535897932384626433832795
+
 void calculateBikeSpeed(){
-  pyöränRenkaanPiiri = 68.58 * pi
-  
+  pyöränRenkaanPiiri = 68.58 * PI
+  if (6 == HIGH){
+    time = mills()
+  }
+
 }
 
 void setup() {
