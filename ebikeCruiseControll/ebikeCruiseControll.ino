@@ -85,7 +85,7 @@ void loop() {
       if (bikeSpeed < cruiseSpeed){
         digitalWrite(9, HIGH);
         Serial.println("Bike speed low. Throttling up");
-        delay(200);  
+        delay(200);
         }
       if (bikeSpeed == cruiseSpeed){
         delay(200);
