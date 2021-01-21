@@ -96,9 +96,7 @@ void loop() {
   else{
   digitalWrite(9, throttleInput);
   Serial.println(throttleInput);
-  }  
-
-
+  }
 
 
 //void loop end
